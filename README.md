@@ -2,7 +2,7 @@
 
 A structured, interactive Mandarin learning tool built for professionals who need practical Chinese — not textbook Chinese. Covers 16 lessons across 4 phases, from Pinyin fundamentals to contract language and negotiation, with audio pronunciation powered by Google TTS.
 
-**[Live Demo →](https://your-deployment-url.vercel.app)** &nbsp;|&nbsp; Built with React · Google TTS · Web Speech API
+**[Live Demo →](https://business-chinese-module.vercel.app)** &nbsp;|&nbsp; Built with React · Google TTS · Web Speech API
 
 ---
 
