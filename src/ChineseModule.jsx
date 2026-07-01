@@ -392,6 +392,93 @@ const QUIZ_ALL = [
   { hz:"知识产权", en:"Intellectual property", py:"zhīshí chǎnquán" },
 ];
 
+// ── Poetry & Literature Data ────────────────────────────────
+// Classical lines & chengyu that educated Chinese business contacts
+// recognise instantly — useful for toasts, small talk, and signalling
+// cultural fluency. Each item: read the line(s), fill the blank,
+// then answer a comprehension / usage question.
+
+const POETRY_ITEMS = [
+  {
+    id:1, kind:"Poem", title:"《静夜思》", titlePy:"Jìng Yè Sī", titleEn:"Thoughts on a Quiet Night",
+    author:"李白", authorPy:"Lǐ Bái", dynasty:"Tang Dynasty",
+    lines:[
+      { hz:"床前明月光，", py:"Chuáng qián míng yuè guāng,", en:"Moonlight before my bed," },
+      { hz:"疑是地上霜。", py:"Yí shì dìshàng shuāng.",       en:"I took it for frost on the ground." },
+      { hz:"举头望明月，", py:"Jǔ tóu wàng míng yuè,",        en:"I raise my head to gaze at the moon," },
+      { hz:"低头思故乡。", py:"Dītóu sī gùxiāng.",             en:"then lower it, thinking of home." },
+    ],
+    context:"China's most-quoted poem. Reciting even one line at a dinner — especially near Mid-Autumn Festival or when a colleague is far from family — signals genuine cultural warmth.",
+    blank:{ before:"举头望明月，低头思", after:"。", answer:"故乡", answerPy:"gùxiāng", answerEn:"hometown",
+      options:[{hz:"故乡",py:"gùxiāng",en:"hometown"},{hz:"朋友",py:"péngyǒu",en:"friend"},{hz:"公司",py:"gōngsī",en:"company"},{hz:"未来",py:"wèilái",en:"future"}] },
+    mc:{ q:"What is the poem's central theme?", options:["Homesickness / longing for one's hometown","Romantic love","A business negotiation","Celebrating a victory"], answer:0,
+      explain:"The poem is about a traveler seeing moonlight and being reminded of home — the archetypal expression of homesickness (思乡 sī xiāng) in Chinese literature." },
+  },
+  {
+    id:2, kind:"Poem", title:"《水调歌头》(excerpt)", titlePy:"Shuǐ Diào Gē Tóu", titleEn:"Prelude to Water Melody",
+    author:"苏轼", authorPy:"Sū Shì", dynasty:"Song Dynasty",
+    lines:[
+      { hz:"但愿人长久，", py:"Dàn yuàn rén chángjiǔ,", en:"May we all be blessed with long life," },
+      { hz:"千里共婵娟。", py:"Qiānlǐ gòng chánjuān.",  en:"Sharing this beautiful moonlight, though miles apart." },
+    ],
+    context:"The standard closing toast at Mid-Autumn Festival business dinners. Offering this line shows you understand the sentiment behind the holiday, not just the dumplings.",
+    blank:{ before:"但愿人", after:"，千里共婵娟。", answer:"长久", answerPy:"chángjiǔ", answerEn:"long-lasting",
+      options:[{hz:"长久",py:"chángjiǔ",en:"long-lasting"},{hz:"平安",py:"píng'ān",en:"safe"},{hz:"成功",py:"chénggōng",en:"successful"},{hz:"快乐",py:"kuàilè",en:"happy"}] },
+    mc:{ q:"When would this line be most appropriate to use?", options:["Signing a supplier contract","A toast during Mid-Autumn Festival, especially with someone far from family","Apologizing for a missed deadline","Opening a product presentation"], answer:1,
+      explain:"苏轼 wrote this while separated from his brother during 中秋节 (Mid-Autumn Festival). It is the go-to toast when colleagues or partners are apart from loved ones." },
+  },
+  {
+    id:3, kind:"Poem", title:"《送杜少府之任蜀州》(excerpt)", titlePy:"Sòng Dù Shàofǔ Zhī Rèn Shǔzhōu", titleEn:"Farewell to Vice-Prefect Du",
+    author:"王勃", authorPy:"Wáng Bó", dynasty:"Tang Dynasty",
+    lines:[
+      { hz:"海内存知己，", py:"Hǎinèi cún zhījǐ,",     en:"While a true friend remains within the four seas," },
+      { hz:"天涯若比邻。", py:"Tiānyá ruò bǐlín.",      en:"even distant horizons feel like a neighbouring gate." },
+    ],
+    context:"The classic line for parting with a business partner or colleague who is relocating. It reassures the relationship (关系) will hold despite distance.",
+    blank:{ before:"海内存", after:"，天涯若比邻。", answer:"知己", answerPy:"zhījǐ", answerEn:"a true friend / soulmate",
+      options:[{hz:"知己",py:"zhījǐ",en:"true friend"},{hz:"财富",py:"cáifù",en:"wealth"},{hz:"合同",py:"hétóng",en:"contract"},{hz:"客户",py:"kèhù",en:"client"}] },
+    mc:{ q:"This line is best used when...", options:["Closing a price negotiation","Saying farewell to a partner who is moving far away, to reassure the relationship endures","Requesting a discount","Complaining about a delayed shipment"], answer:1,
+      explain:"It literally means: as long as a true friend exists, even the ends of the earth feel like next door. A warm, literary way to say 'distance won't change our 关系.'" },
+  },
+  {
+    id:4, kind:"Chengyu", title:"一诺千金", titlePy:"Yī Nuò Qiān Jīn", titleEn:"One Promise, a Thousand Gold",
+    author:"Historical idiom", authorPy:"", dynasty:"Han Dynasty origin",
+    lines:[
+      { hz:"一诺千金。", py:"Yī nuò qiān jīn.", en:"A single promise is worth a thousand pieces of gold." },
+    ],
+    context:"A four-character idiom (成语) praising someone whose word is completely reliable. Say this about a partner who always delivers — high praise in Chinese business culture.",
+    blank:{ before:"一", after:"千金", answer:"诺", answerPy:"nuò", answerEn:"promise",
+      options:[{hz:"诺",py:"nuò",en:"promise"},{hz:"言",py:"yán",en:"speech"},{hz:"心",py:"xīn",en:"heart"},{hz:"信",py:"xìn",en:"trust"}] },
+    mc:{ q:"一诺千金 is best used to describe...", options:["A very expensive product","Someone who always keeps their promises","A large cash payment","A failed negotiation"], answer:1,
+      explain:"It praises absolute trustworthiness — someone whose spoken word needs no contract to be believed. High-value compliment for a supplier or partner." },
+  },
+  {
+    id:5, kind:"Literature", title:"《道德经》(excerpt)", titlePy:"Dàodéjīng", titleEn:"Tao Te Ching",
+    author:"老子", authorPy:"Lǎozǐ", dynasty:"Zhou Dynasty",
+    lines:[
+      { hz:"千里之行，", py:"Qiānlǐ zhī xíng,", en:"A journey of a thousand miles" },
+      { hz:"始于足下。", py:"Shǐ yú zúxià.",     en:"begins beneath one's own feet." },
+    ],
+    context:"Often used to open a presentation about a long-term plan, a market entry strategy, or to encourage a team taking on a big project.",
+    blank:{ before:"千里之行，始于", after:"。", answer:"足下", answerPy:"zúxià", answerEn:"one's own feet / right here, right now",
+      options:[{hz:"足下",py:"zúxià",en:"one's own feet"},{hz:"努力",py:"nǔlì",en:"effort"},{hz:"计划",py:"jìhuà",en:"a plan"},{hz:"团队",py:"tuánduì",en:"a team"}] },
+    mc:{ q:"This line would fit best at the start of...", options:["A complaint email","A presentation launching a long-term strategy or ambitious project","A refusal of a discount","A resignation letter"], answer:1,
+      explain:"It's the Chinese equivalent of 'every journey begins with a single step' — a motivating opener for kicking off something ambitious." },
+  },
+  {
+    id:6, kind:"Chengyu", title:"人无信不立", titlePy:"Rén Wú Xìn Bù Lì", titleEn:"Without Trust, One Cannot Stand",
+    author:"孔子 (attributed)", authorPy:"Kǒngzǐ", dynasty:"Spring and Autumn period",
+    lines:[
+      { hz:"人无信不立。", py:"Rén wú xìn bù lì.", en:"A person without trustworthiness cannot stand (in society)." },
+    ],
+    context:"A Confucian principle underlying Chinese business ethics — 信 (trust/credibility) is treated as the foundation of any relationship, not a bonus.",
+    blank:{ before:"人无", after:"不立。", answer:"信", answerPy:"xìn", answerEn:"trust / credibility",
+      options:[{hz:"信",py:"xìn",en:"trust"},{hz:"钱",py:"qián",en:"money"},{hz:"名",py:"míng",en:"fame"},{hz:"才",py:"cái",en:"talent"}] },
+    mc:{ q:"This saying reflects which core business value?", options:["Aggressive negotiation","Trustworthiness as the foundation of any relationship","Speed of delivery","Low pricing"], answer:1,
+      explain:"Attributed to Confucius — it argues that without 信 (credibility), a person has no standing at all. It's often cited to explain why Chinese partners value reputation over contracts alone." },
+  },
+];
+
 const P1_TITLES = ["Pinyin Bridge","The 4 Tones","Radicals","Business Chars"];
 const P2_TITLES = ["Greetings","Numbers & Money","Company Structure","Business Culture"];
 const P3_TITLES = ["Business Emails","Meeting Language","Negotiation","Formal vs Casual"];
@@ -592,6 +679,35 @@ function App({ initPhase=1, initLesson=0, initTab="roadmap" }) {
   const [result,   setResult]   = useState(null);
   const [score,    setScore]    = useState(0);
   const [done,     setDone]     = useState(false);
+
+  // Poetry & Literature state
+  const [poemIdx,      setPoemIdx]      = useState(0);
+  const [poemStage,    setPoemStage]    = useState("read");   // read | blank | mc | result
+  const [blankPick,    setBlankPick]    = useState(null);
+  const [blankResult,  setBlankResult]  = useState(null);      // ok | wrong
+  const [mcPick,       setMcPick]       = useState(null);
+  const [mcResult,     setMcResult]     = useState(null);      // ok | wrong
+  const [poemScore,    setPoemScore]    = useState(0);
+  const [poemDone,     setPoemDone]     = useState(false);
+
+  function pickBlank(opt) {
+    if (blankResult) return;
+    setBlankPick(opt.hz);
+    const ok = opt.hz === POETRY_ITEMS[poemIdx].blank.answer;
+    setBlankResult(ok ? "ok" : "wrong");
+  }
+  function pickMc(i) {
+    if (mcResult) return;
+    setMcPick(i);
+    const ok = i === POETRY_ITEMS[poemIdx].mc.answer;
+    setMcResult(ok ? "ok" : "wrong");
+    if (ok && blankResult==="ok") setPoemScore(s=>s+1);
+  }
+  function nextPoem() {
+    if (poemIdx+1 >= POETRY_ITEMS.length) { setPoemDone(true); return; }
+    setPoemIdx(i=>i+1); setPoemStage("read"); setBlankPick(null); setBlankResult(null); setMcPick(null); setMcResult(null);
+  }
+  function resetPoetry() { setPoemIdx(0); setPoemStage("read"); setBlankPick(null); setBlankResult(null); setMcPick(null); setMcResult(null); setPoemScore(0); setPoemDone(false); }
 
   const VLIST = vFilter===0 ? ALL_VOCAB
               : vFilter===1 ? P1_VOCAB
@@ -1293,268 +1409,4 @@ function App({ initPhase=1, initLesson=0, initTab="roadmap" }) {
         ))}
         <div style={{background:C.navy,borderRadius:14,padding:18,color:"#fff",marginTop:4,textAlign:"center"}}>
           <div style={{fontSize:36,marginBottom:10}}>🎓</div>
-          <div style={{fontWeight:900,fontSize:20,marginBottom:8}}>All 4 Phases Complete</div>
-          <div style={{fontSize:13,lineHeight:1.7,opacity:.85,marginBottom:16,padding:"0 4px"}}>
-            You have covered 48 business vocabulary words, 16 lessons across phonetics, vocabulary, professional communication, and advanced fluency. You now have the language foundation for real Chinese business interactions.
-          </div>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:8}}>
-            {[["48","Words"],["16","Lessons"],["26","Weeks"],["4","Phases"]].map(([n,l])=>(
-              <div key={l} style={{background:"rgba(255,255,255,0.1)",borderRadius:10,padding:10}}>
-                <div style={{fontWeight:900,fontSize:22}}>{n}</div>
-                <div style={{fontSize:10,opacity:.6,marginTop:2}}>{l}</div>
-              </div>
-            ))}
-          </div>
-          <div style={{marginTop:14,fontSize:12,opacity:.6}}>Next: find a native-speaking conversation partner and practise.</div>
-        </div>
-      </div>
-    );
-  }
-
-  // ── Main Render ────────────────────────────────────────────
-  return (
-    <div style={{fontFamily:"'Segoe UI',system-ui,sans-serif",background:C.bg,minHeight:"100vh",maxWidth:480,margin:"0 auto"}}>
-
-      {/* Header */}
-      <div style={{background:C.navy,padding:"18px 20px 0",color:"#fff"}}>
-        <div style={{display:"flex",alignItems:"center",gap:14,marginBottom:14}}>
-          <div style={{fontSize:42,fontWeight:900,color:C.red,lineHeight:1,letterSpacing:-2}}>中</div>
-          <div>
-            <div style={{fontWeight:800,fontSize:17}}>Business Chinese</div>
-            <div style={{fontSize:11,opacity:.55,marginTop:2}}>All 4 Phases · 🔊 Audio · 26-Week Track · Tailored for Jericho</div>
-          </div>
-        </div>
-        <div style={{display:"flex",gap:1}}>
-          {[["roadmap","路 Map"],["lesson","学 Learn"],["vocab","词 Vocab"],["quiz","练 Quiz"]].map(([id,label])=>(
-            <button key={id} onClick={()=>setTab(id)} style={{flex:1,padding:"10px 2px",background:tab===id?C.bg:"transparent",color:tab===id?C.navy:"rgba(255,255,255,0.5)",border:"none",borderRadius:"8px 8px 0 0",fontWeight:700,fontSize:11,cursor:"pointer",transition:"all .2s",letterSpacing:.3}}>{label}</button>
-          ))}
-        </div>
-      </div>
-
-      <div style={{padding:20}}>
-
-        {/* ══ ROADMAP ══════════════════════════════════════════════ */}
-        {tab==="roadmap" && (
-          <div>
-            <div style={{background:C.white,borderRadius:16,padding:16,marginBottom:16,border:`2px solid ${C.gold}`}}>
-              <div style={{fontWeight:800,color:C.navy,marginBottom:10}}>Your Learning Profile</div>
-              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:10}}>
-                {[["Level","Hear & speak some"],["Goal","Business & professional"],["Style","Mix of everything"],["Track","26-week program"]].map(([k,v])=>(
-                  <div key={k} style={{background:C.light,borderRadius:8,padding:10}}>
-                    <div style={{fontSize:10,color:"#aaa",marginBottom:2}}>{k.toUpperCase()}</div>
-                    <div style={{fontWeight:700,color:C.navy,fontSize:13}}>{v}</div>
-                  </div>
-                ))}
-              </div>
-              <div style={{background:"#FFF8E7",borderRadius:8,padding:10,fontSize:13,color:"#555",lineHeight:1.6}}>
-                <strong style={{color:C.gold}}>Your edge:</strong> You already know sounds and some vocabulary. Phase 1 moves faster for you — it's connecting what you hear to how it's written.
-              </div>
-            </div>
-
-            {PHASES.map(p=>(
-              <div key={p.id} style={{background:C.white,borderRadius:16,padding:16,marginBottom:12,border:p.active?`2px solid ${p.bg}`:`1px solid ${C.light}`,opacity:p.active?1:.75}}>
-                <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:10}}>
-                  <div style={{background:p.bg,color:"#fff",borderRadius:12,width:52,height:52,display:"flex",alignItems:"center",justifyContent:"center",fontSize:30,fontWeight:900,flexShrink:0}}>{p.hanzi}</div>
-                  <div style={{flex:1}}>
-                    <div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap"}}>
-                      <span style={{fontWeight:800,color:C.navy}}>Phase {p.id}: {p.title}</span>
-                      {p.active && <span style={{background:p.bg,color:"#fff",borderRadius:20,padding:"2px 8px",fontSize:10,fontWeight:700}}>ACTIVE</span>}
-                    </div>
-                    <div style={{color:"#888",fontSize:12,marginTop:2}}>{p.weeks}</div>
-                  </div>
-                </div>
-                <div style={{background:C.light,borderRadius:8,padding:10,fontSize:13,color:"#555"}}>🎯 {p.goal}</div>
-              </div>
-            ))}
-
-            <div style={{background:C.navy,borderRadius:16,padding:18,color:"#fff",textAlign:"center"}}>
-              <div style={{fontSize:11,opacity:.55,marginBottom:4,letterSpacing:.5}}>DAILY COMMITMENT</div>
-              <div style={{fontWeight:900,fontSize:28}}>20–30 min / day</div>
-              <div style={{fontSize:13,opacity:.6,marginTop:4}}>= Business Chinese in 6 months</div>
-              <div style={{display:"flex",justifyContent:"center",gap:24,marginTop:14}}>
-                {[["📖 Learn","10 min"],["🃏 Vocab","10 min"],["✏️ Quiz","10 min"]].map(([l,t])=>(
-                  <div key={l}><div style={{fontWeight:700,fontSize:14}}>{t}</div><div style={{fontSize:11,opacity:.55}}>{l}</div></div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* ══ LESSONS ═══════════════════════════════════════════════ */}
-        {tab==="lesson" && (
-          <div>
-            <AudioDiag />
-
-            {/* Phase selector — 2×2 grid */}
-            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:6,marginBottom:14}}>
-              {[[1,"① Literacy",C.red],[2,"② Vocabulary",C.green],[3,"③ Communication","#1A7A6E"],[4,"④ Fluency",C.purple]].map(([p,label,col])=>(
-                <button key={p} onClick={()=>setPhase(p)} style={{padding:"9px 6px",background:phase===p?col:C.light,color:phase===p?"#fff":C.navy,border:"none",borderRadius:12,fontWeight:700,fontSize:11,cursor:"pointer",transition:"all .2s"}}>
-                  {label}
-                </button>
-              ))}
-            </div>
-
-            {/* Sub-lesson pills */}
-            <div style={{display:"flex",gap:6,marginBottom:16,overflowX:"auto",paddingBottom:4}}>
-              {(phase===1?P1_TITLES:phase===2?P2_TITLES:phase===3?P3_TITLES:P4_TITLES).map((title,i)=>{
-                const active=phase===1?p1Page===i:phase===2?p2Page===i:phase===3?p3Page===i:p4Page===i;
-                const col=phase===1?C.red:phase===2?C.green:phase===3?"#1A7A6E":C.purple;
-                return (
-                  <button key={i} onClick={()=>phase===1?setP1Page(i):phase===2?setP2Page(i):phase===3?setP3Page(i):setP4Page(i)} style={{background:active?col:C.light,color:active?"#fff":C.navy,border:"none",borderRadius:20,padding:"6px 14px",fontWeight:700,fontSize:11,cursor:"pointer",whiteSpace:"nowrap",flexShrink:0}}>
-                    {i+(phase===1?1:phase===2?5:phase===3?9:13)}. {title}
-                  </button>
-                );
-              })}
-            </div>
-
-            {phase===1?renderP1():phase===2?renderP2():phase===3?renderP3():renderP4()}
-
-            {/* Lesson navigation */}
-            <div style={{display:"flex",gap:10,marginTop:20}}>
-              {(phase===1?p1Page:phase===2?p2Page:phase===3?p3Page:p4Page)>0 && (
-                <button onClick={()=>phase===1?setP1Page(p=>p-1):phase===2?setP2Page(p=>p-1):phase===3?setP3Page(p=>p-1):setP4Page(p=>p-1)} style={{flex:1,padding:14,background:C.light,color:C.navy,border:"none",borderRadius:12,fontWeight:700,cursor:"pointer"}}>← Back</button>
-              )}
-              {(phase===1?p1Page:phase===2?p2Page:phase===3?p3Page:p4Page)<3 ? (
-                <button onClick={()=>phase===1?setP1Page(p=>p+1):phase===2?setP2Page(p=>p+1):phase===3?setP3Page(p=>p+1):setP4Page(p=>p+1)} style={{flex:1,padding:14,background:phase===1?C.red:phase===2?C.green:phase===3?"#1A7A6E":C.purple,color:"#fff",border:"none",borderRadius:12,fontWeight:700,cursor:"pointer"}}>Next →</button>
-              ) : phase===1 ? (
-                <button onClick={()=>{setPhase(2);setP2Page(0);}} style={{flex:1,padding:14,background:C.green,color:"#fff",border:"none",borderRadius:12,fontWeight:700,cursor:"pointer"}}>Go to Phase 2 →</button>
-              ) : phase===2 ? (
-                <button onClick={()=>{setPhase(3);setP3Page(0);}} style={{flex:1,padding:14,background:"#1A7A6E",color:"#fff",border:"none",borderRadius:12,fontWeight:700,cursor:"pointer"}}>Go to Phase 3 →</button>
-              ) : phase===3 ? (
-                <button onClick={()=>{setPhase(4);setP4Page(0);}} style={{flex:1,padding:14,background:C.purple,color:"#fff",border:"none",borderRadius:12,fontWeight:700,cursor:"pointer"}}>Go to Phase 4 →</button>
-              ) : (
-                <button onClick={()=>setTab("vocab")} style={{flex:1,padding:14,background:C.navy,color:"#fff",border:"none",borderRadius:12,fontWeight:700,cursor:"pointer"}}>Go to Vocab →</button>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* ══ VOCAB FLASHCARDS ════════════════════════════════════ */}
-        {tab==="vocab" && (
-          <div>
-            <div style={{fontWeight:800,fontSize:20,color:C.navy,marginBottom:2}}>Flashcards</div>
-            <div style={{color:"#888",fontSize:13,marginBottom:12}}>Tap card to flip · {cardIdx+1} of {VLIST.length}</div>
-
-            {/* Phase filter */}
-            <div style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:5,marginBottom:14}}>
-              {[[0,"All (48)"],[1,"P1"],[2,"P2"],[3,"P3"],[4,"P4"]].map(([f,label])=>(
-                <button key={f} onClick={()=>{setVFilter(f);setCardIdx(0);setFlipped(false);}} style={{padding:"7px 2px",background:vFilter===f?C.navy:C.light,color:vFilter===f?"#fff":C.navy,border:"none",borderRadius:10,fontWeight:700,fontSize:11,cursor:"pointer"}}>
-                  {label}
-                </button>
-              ))}
-            </div>
-
-            {/* Progress */}
-            <div style={{background:C.light,borderRadius:10,height:6,marginBottom:14}}>
-              <div style={{background:C.red,borderRadius:10,height:6,width:`${((cardIdx+1)/VLIST.length)*100}%`,transition:"width .3s"}}/>
-            </div>
-
-            {/* Card */}
-            <div onClick={()=>setFlipped(!flipped)} style={{background:C.white,borderRadius:20,padding:32,minHeight:210,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",border:`2px solid ${C.light}`,cursor:"pointer",marginBottom:14,boxShadow:"0 4px 24px rgba(0,0,0,0.07)",textAlign:"center"}}>
-              {!flipped ? (
-                <>
-                  <div style={{fontSize:76,fontWeight:900,color:C.navy,lineHeight:1}}>{VLIST[cardIdx].hz}</div>
-                  <div style={{fontSize:12,color:"#bbb",marginTop:14}}>Tap to reveal meaning</div>
-                </>
-              ) : (
-                <>
-                  <div style={{fontSize:40,fontWeight:900,color:C.navy,marginBottom:4}}>{VLIST[cardIdx].hz}</div>
-                  <div style={{display:"flex",alignItems:"center",gap:10,justifyContent:"center",marginBottom:4}}>
-                    <span style={{fontSize:18,fontWeight:700,color:C.red}}>{VLIST[cardIdx].py}</span>
-                    <SpeakBtn text={VLIST[cardIdx].hz} />
-                  </div>
-                  <div style={{fontSize:20,fontWeight:700,color:"#333",marginBottom:14}}>{VLIST[cardIdx].en}</div>
-                  <div style={{background:C.light,borderRadius:10,padding:"8px 14px"}}>
-                    <div style={{fontSize:11,color:"#aaa",marginBottom:3}}>Business context</div>
-                    <div style={{fontSize:13,color:"#555",fontStyle:"italic"}}>{VLIST[cardIdx].use}</div>
-                  </div>
-                </>
-              )}
-            </div>
-
-            {!flipped ? (
-              <div style={{display:"flex",gap:10}}>
-                <button onClick={()=>{setCardIdx(i=>Math.max(0,i-1));setFlipped(false);}} disabled={cardIdx===0} style={{flex:1,padding:14,background:C.light,color:cardIdx===0?"#ccc":C.navy,border:"none",borderRadius:12,fontWeight:700,cursor:cardIdx===0?"not-allowed":"pointer"}}>← Prev</button>
-                <button onClick={()=>{setCardIdx(i=>Math.min(VLIST.length-1,i+1));setFlipped(false);}} disabled={cardIdx===VLIST.length-1} style={{flex:1,padding:14,background:cardIdx===VLIST.length-1?C.light:C.red,color:cardIdx===VLIST.length-1?"#ccc":"#fff",border:"none",borderRadius:12,fontWeight:700,cursor:cardIdx===VLIST.length-1?"not-allowed":"pointer"}}>Next →</button>
-              </div>
-            ) : (
-              <div style={{display:"flex",gap:10}}>
-                <button onClick={()=>{setCardIdx(i=>Math.min(VLIST.length-1,i+1));setFlipped(false);}} style={{flex:1,padding:14,background:C.green,color:"#fff",border:"none",borderRadius:12,fontWeight:700,cursor:"pointer"}}>✓ Got it</button>
-                <button onClick={()=>setFlipped(false)} style={{flex:1,padding:14,background:"#FFF0F0",color:C.red,border:`1px solid ${C.red}`,borderRadius:12,fontWeight:700,cursor:"pointer"}}>✗ Again</button>
-              </div>
-            )}
-            {cardIdx===VLIST.length-1 && (
-              <button onClick={()=>setTab("quiz")} style={{width:"100%",marginTop:10,padding:14,background:C.navy,color:"#fff",border:"none",borderRadius:12,fontWeight:700,cursor:"pointer"}}>Take the Full Quiz →</button>
-            )}
-          </div>
-        )}
-
-        {/* ══ QUIZ ════════════════════════════════════════════════ */}
-        {tab==="quiz" && (
-          <div>
-            {!done ? (
-              <>
-                <div style={{fontWeight:800,fontSize:20,color:C.navy,marginBottom:2}}>Recognition Drill</div>
-                <div style={{color:"#888",fontSize:13,marginBottom:14}}>See character → type English meaning. All 4 phases combined (24 questions).</div>
-
-                <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
-                  <div style={{flex:1,background:C.light,borderRadius:10,height:6}}>
-                    <div style={{background:C.red,borderRadius:10,height:6,width:`${(quizIdx/QUIZ_ALL.length)*100}%`,transition:"width .3s"}}/>
-                  </div>
-                  <div style={{fontSize:12,fontWeight:700,color:C.navy,minWidth:36}}>{quizIdx}/{QUIZ_ALL.length}</div>
-                </div>
-
-                <div style={{background:C.white,borderRadius:20,padding:32,textAlign:"center",marginBottom:14,border:`2px solid ${C.light}`}}>
-                  <div style={{fontSize:84,fontWeight:900,color:C.navy,lineHeight:1,marginBottom:12}}>{QUIZ_ALL[quizIdx].hz}</div>
-                  <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:8}}>
-                    <SpeakBtn text={QUIZ_ALL[quizIdx].hz} />
-                    <span style={{fontSize:14,color:"#aaa"}}>What does this mean in English?</span>
-                  </div>
-                </div>
-
-                <input value={answer} onChange={e=>setAnswer(e.target.value)} onKeyDown={e=>e.key==="Enter"&&!result&&checkAnswer()} placeholder="Type the English meaning…" disabled={!!result}
-                  style={{width:"100%",padding:"14px 16px",borderRadius:12,border:`2px solid ${result==="ok"?C.green:result==="wrong"?C.red:C.light}`,fontSize:16,fontFamily:"inherit",background:result==="ok"?"#E8F7EE":result==="wrong"?"#FFF0F0":C.white,color:C.navy,outline:"none",boxSizing:"border-box",marginBottom:10}}/>
-
-                {result==="ok"    && <div style={{background:"#E8F7EE",border:`2px solid ${C.green}`,borderRadius:12,padding:12,marginBottom:10,color:C.green,fontWeight:700}}>✓ Correct! {QUIZ_ALL[quizIdx].hz} = {QUIZ_ALL[quizIdx].en} · {QUIZ_ALL[quizIdx].py}</div>}
-                {result==="wrong" && <div style={{background:"#FFF0F0",border:`2px solid ${C.red}`,borderRadius:12,padding:12,marginBottom:10,color:C.red,fontWeight:700}}>✗ Answer: <strong>{QUIZ_ALL[quizIdx].en}</strong> ({QUIZ_ALL[quizIdx].py})</div>}
-
-                {!result
-                  ? <button onClick={checkAnswer} style={{width:"100%",padding:14,background:C.navy,color:"#fff",border:"none",borderRadius:12,fontWeight:700,fontSize:16,cursor:"pointer"}}>Check Answer</button>
-                  : <button onClick={nextQuiz}    style={{width:"100%",padding:14,background:C.red, color:"#fff",border:"none",borderRadius:12,fontWeight:700,fontSize:16,cursor:"pointer"}}>Next →</button>}
-
-                <div style={{textAlign:"center",marginTop:10,color:"#aaa",fontSize:13}}>Score so far: {score}/{quizIdx}</div>
-              </>
-            ) : (
-              <div style={{textAlign:"center",paddingTop:24}}>
-                <div style={{fontSize:68,marginBottom:14}}>{score>=10?"🏆":score>=7?"💪":"📚"}</div>
-                <div style={{fontWeight:900,fontSize:24,color:C.navy,marginBottom:8}}>Quiz Complete!</div>
-                <div style={{fontSize:48,fontWeight:900,color:C.red,marginBottom:6}}>{score}<span style={{fontSize:22,color:"#aaa"}}>/{QUIZ_ALL.length}</span></div>
-                <div style={{color:"#666",fontSize:15,marginBottom:24,lineHeight:1.7,padding:"0 8px"}}>
-                  {score>=20?"🏆 Outstanding — all 4 phases mastered. You are ready for real business conversations in Chinese.":score>=15?"💪 Strong result. Review the missed words in Vocab, then retry.":"📚 Keep drilling the flashcards daily — consistency beats intensity every time."}
-                </div>
-                <button onClick={resetQuiz} style={{width:"100%",padding:14,background:C.navy,color:"#fff",border:"none",borderRadius:12,fontWeight:700,fontSize:16,cursor:"pointer",marginBottom:10}}>Retry Quiz</button>
-                <button onClick={()=>setTab("vocab")} style={{width:"100%",padding:14,background:C.light,color:C.navy,border:"none",borderRadius:12,fontWeight:700,fontSize:16,cursor:"pointer"}}>Back to Flashcards</button>
-              </div>
-            )}
-          </div>
-        )}
-
-      </div>
-    </div>
-  );
-}
-
-// ── Root — shows Onboarding first, then App ────────────────
-export default function Root() {
-  const [started, setStarted] = useState(false);
-  const [path,    setPath]    = useState({ phase:1, lesson:0, tab:"roadmap" });
-
-  if (!started) {
-    return (
-      <Onboarding
-        onStart={(p) => { setPath(p); setStarted(true); }}
-      />
-    );
-  }
-  return <App initPhase={path.phase} initLesson={path.lesson} initTab={path.tab} />;
-}
+          <div style={{fontWeight:900,fontSize:20,margin
