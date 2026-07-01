@@ -28,6 +28,10 @@ Built for my own use — I hear and speak some Mandarin from trilingual exposure
 - **Interactive tone explorer** — tap to expand each tone with example word and business usage
 - **Full lesson navigation** — linear phase flow with back/next controls and direct lesson jumping
 - **Mobile-first layout** — designed for a 480px screen, works on Chrome desktop and mobile
+- **Poetry & Literature tab** — 6 classical texts (poems, 
+  chengyu, philosophical excerpts) with read → fill-in-the-
+  blank → business usage quiz flow. Covers when and how to 
+  use each line in a professional context
 
 ---
 
@@ -63,6 +67,25 @@ Built for my own use — I hear and speak some Mandarin from trilingual exposure
 14. Business Presentations — 6-stage phrase toolkit, buying time in Q&A
 15. Industry Vocabulary — F&B sourcing terms (MOQ, shelf life, wholesale price) + tech/digital terms (AI, data analysis, digital transformation, ROI)
 16. Etiquette & Protocol — gift giving rules, banquet seating, drinking culture, 红包, factory visits, holiday greetings
+
+### Poetry & Literature · 诗
+*Classical lines every educated Chinese contact recognises*
+
+- 《静夜思》Li Bai — China's most-quoted poem; one line at 
+  a Mid-Autumn dinner signals genuine cultural warmth
+- 《水调歌头》Su Shi — the standard toast at festival 
+  business dinners
+- 《送杜少府之任蜀州》Wang Bo — for farewells when a partner 
+  is relocating; reassures the relationship endures
+- 一诺千金 — "one promise, a thousand gold"; the highest 
+  compliment for a reliable supplier
+- 千里之行，始于足下 (Laozi) — perfect opener for a 
+  long-term strategy presentation
+- 人无信不立 (Confucius) — the trust principle underlying 
+  every Chinese business relationship
+
+Each item: read the text with Pinyin and English → fill in 
+the blank → answer a business usage question.
 
 ---
 
@@ -169,6 +192,9 @@ This reflects how I work with AI tools — I direct and decide; the AI implement
 **Edo Sanjaya P (Jericho)** — Operations manager, F&B founder (Pinya Co., Bandung), ML Engineering Intern at FlyRank AI, and AI annotation specialist. Trilingual in English, Indonesian, and Mandarin.
 
 Built this to close my own literacy gap before supplier negotiations with Chinese partners. Now using it as a daily study tool alongside the 26-week curriculum.
+
+16 structured lessons across 4 phases, plus a dedicated 
+Poetry & Literature section covering 6 classical texts
 
 [LinkedIn](https://linkedin.com/in/your-profile) · [Notion Portfolio](https://your-notion-link) · [Upwork](https://your-upwork-link)
 
